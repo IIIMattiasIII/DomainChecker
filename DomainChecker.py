@@ -7,6 +7,8 @@ formatted Excel spreadsheet. This script was designed with the intention of bein
 options can be found in the aforementioned config such that they can be set accordingly and the script running can be
 automated.
 
+GitHub Repository: https://github.com/IIIMattiasIII/DomainChecker
+
     Author:         Mattias Przyrembel
     Start Date:     September 2022
     Client:         Ben @ Cre8ive IT
@@ -295,12 +297,9 @@ def create_gen_root_5_end4(fchar):
                 for l in possible_vals[:-1]:
                     word = i + j + k + l
                     if word[-1] != '-' and "--" not in word:
-                        print(fchar+word, get_general_value(fchar+word))
                         if get_general_value(fchar+word) < gen_s_min_val:
-                            print("Less")
                             pass
                         elif get_general_value(fchar+word) > gen_s_max_val:
-                            print("returning")
                             return strings
                         else:
                             strings.append(fchar+word)
